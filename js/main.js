@@ -9,7 +9,7 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
 BRUSHED.mobileNav = function(){
 	var windowWidth = $(window).width();
-	
+
 	if( windowWidth <= 979 ) {
 		if( $('#mobile-nav').length > 0 ) {
 			mobileMenuClone.insertAfter('#menu');
@@ -18,7 +18,7 @@ BRUSHED.mobileNav = function(){
 	} else {
 		$('#navigation-mobile').css('display', 'none');
 		if ($('#mobile-nav').hasClass('open')) {
-			$('#mobile-nav').removeClass('open');	
+			$('#mobile-nav').removeClass('open');
 		}
 	}
 }
@@ -26,7 +26,7 @@ BRUSHED.mobileNav = function(){
 BRUSHED.listenerMenu = function(){
 	$('#mobile-nav').on('click', function(e){
 		$(this).toggleClass('open');
-		
+
 		if ($('#mobile-nav').hasClass('open')) {
 			$('#navigation-mobile').slideDown(500, 'easeOutExpo');
 		} else {
@@ -34,7 +34,7 @@ BRUSHED.listenerMenu = function(){
 		}
 		e.preventDefault();
 	});
-	
+
 	$('#menu-nav-mobile a').on('click', function(){
 		$('#mobile-nav').removeClass('open');
 		$('#navigation-mobile').slideUp(350, 'easeOutExpo');
@@ -62,8 +62,8 @@ BRUSHED.slider = function(){
 		keyboard_nav            :   1,			// Keyboard navigation on/off
 		performance				:	1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
 		image_protect			:	1,			// Disables image dragging and right click with Javascript
-												   
-		// Size & Position						   
+
+		// Size & Position
 		min_width		        :   0,			// Min width allowed (in pixels)
 		min_height		        :   0,			// Min height allowed (in pixels)
 		vertical_center         :   1,			// Vertically center background
@@ -71,22 +71,22 @@ BRUSHED.slider = function(){
 		fit_always				:	0,			// Image will never exceed browser width or height (Ignores min. dimensions)
 		fit_portrait         	:   1,			// Portrait images will not exceed browser height
 		fit_landscape			:   0,			// Landscape images will not exceed browser width
-												   
-		// Components							
+
+		// Components
 		slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''}  
+											{image : 'img/slider-images/image01.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
+											{image : 'img/slider-images/image02.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
+											{image : 'img/slider-images/image03.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
+											{image : 'img/slider-images/image04.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''}  
 									],
-									
-		// Theme Options			   
-		progress_bar			:	0,			// Timer for each slide							
+
+		// Theme Options
+		progress_bar			:	0,			// Timer for each slide
 		mouse_scrub				:	0
-		
+
 	});
 
 }
@@ -106,9 +106,9 @@ BRUSHED.nav = function(){
 ================================================== */
 
 BRUSHED.filter = function (){
-	if($('#projects').length > 0){		
+	if($('#projects').length > 0){
 		var $container = $('#projects');
-		
+
 		$container.imagesLoaded(function() {
 			$container.isotope({
 			  // options
@@ -117,12 +117,12 @@ BRUSHED.filter = function (){
 			  layoutMode : 'fitRows'
 			});
 		});
-	
-		
+
+
 		// filter items when filter link is clicked
 		var $optionSets = $('#options .option-set'),
 			$optionLinks = $optionSets.find('a');
-	
+
 		  $optionLinks.click(function(){
 			var $this = $(this);
 			// don't proceed if already selected
@@ -132,7 +132,7 @@ BRUSHED.filter = function (){
 			var $optionSet = $this.parents('.option-set');
 			$optionSet.find('.selected').removeClass('selected');
 			$this.addClass('selected');
-	  
+
 			// make option object dynamically, i.e. { filter: '.my-filter-class' }
 			var options = {},
 				key = $optionSet.attr('data-option-key'),
@@ -147,7 +147,7 @@ BRUSHED.filter = function (){
 			  // otherwise, apply new options
 			  $container.isotope( options );
 			}
-			
+
 			return false;
 		});
 	}
@@ -160,8 +160,8 @@ BRUSHED.filter = function (){
 
 BRUSHED.fancyBox = function(){
 	if($('.fancybox').length > 0 || $('.fancybox-media').length > 0 || $('.fancybox-various').length > 0){
-		
-		$(".fancybox").fancybox({				
+
+		$(".fancybox").fancybox({
 				padding : 0,
 				beforeShow: function () {
 					this.title = $(this.element).attr('title');
@@ -171,7 +171,7 @@ BRUSHED.fancyBox = function(){
 					title : { type: 'inside' },
 				}
 			});
-			
+
 		$('.fancybox-media').fancybox({
 			openEffect  : 'none',
 			closeEffect : 'none',
@@ -190,21 +190,21 @@ BRUSHED.fancyBox = function(){
 BRUSHED.contactForm = function(){
 	$("#contact-submit").on('click',function() {
 		$contact_form = $('#contact-form');
-		
+
 		var fields = $contact_form.serialize();
-		
+
 		$.ajax({
 			type: "POST",
-			url: "_include/php/contact.php",
+			url: "php/contact.php",
 			data: fields,
 			dataType: 'json',
 			success: function(response) {
-				
+
 				if(response.status){
 					$('#contact-form input').val('');
 					$('#contact-form textarea').val('');
 				}
-				
+
 				$('#response').empty().html(response.html);
 			}
 		});
@@ -218,11 +218,11 @@ BRUSHED.contactForm = function(){
 ================================================== */
 
 BRUSHED.tweetFeed = function(){
-	
+
 	var valueTop = -64; // Margin Top Value
-	
+
     $("#ticker").tweet({
-          modpath: '_include/js/twitter/',
+          modpath: 'js/twitter/',
           username: "Bluxart", // Change this with YOUR ID
           page: 1,
           avatar_size: 0,
@@ -236,13 +236,13 @@ BRUSHED.tweetFeed = function(){
 		setTimeout(function() {
 			ul.find('li:first').animate( {marginTop: valueTop + 'px'}, 500, 'linear', function() {
 				$(this).detach().appendTo(ul).removeAttr('style');
-			});	
+			});
 		  ticker();
 		}, 5000);
 	  };
 	  ticker();
 	});
-	
+
 }
 
 
@@ -269,7 +269,7 @@ BRUSHED.menu = function(){
 BRUSHED.goSection = function(){
 	$('#nextsection').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
-		
+
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
@@ -282,7 +282,7 @@ BRUSHED.goSection = function(){
 BRUSHED.goUp = function(){
 	$('#goUp').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
-		
+
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
@@ -326,22 +326,22 @@ BRUSHED.scrollToTop = function(){
 ================================================== */
 
 BRUSHED.utils = function(){
-	
+
 	$('.item-thumbs').bind('touchstart', function(){
 		$(".active").removeClass("active");
       	$(this).addClass('active');
     });
-	
+
 	$('.image-wrap').bind('touchstart', function(){
 		$(".active").removeClass("active");
       	$(this).addClass('active');
     });
-	
+
 	$('#social ul li').bind('touchstart', function(){
 		$(".active").removeClass("active");
       	$(this).addClass('active');
     });
-	
+
 }
 
 /* ==================================================
@@ -350,15 +350,15 @@ BRUSHED.utils = function(){
 
 BRUSHED.accordion = function(){
 	var accordion_trigger = $('.accordion-heading.accordionize');
-	
+
 	accordion_trigger.delegate('.accordion-toggle','click', function(event){
 		if($(this).hasClass('active')){
 			$(this).removeClass('active');
 		   	$(this).addClass('inactive');
 		}
 		else{
-		  	accordion_trigger.find('.active').addClass('inactive');          
-		  	accordion_trigger.find('.active').removeClass('active');   
+		  	accordion_trigger.find('.active').addClass('inactive');
+		  	accordion_trigger.find('.active').removeClass('active');
 		  	$(this).removeClass('inactive');
 		  	$(this).addClass('active');
 	 	}
@@ -372,7 +372,7 @@ BRUSHED.accordion = function(){
 
 BRUSHED.toggle = function(){
 	var accordion_trigger_toggle = $('.accordion-heading.togglize');
-	
+
 	accordion_trigger_toggle.delegate('.accordion-toggle','click', function(event){
 		if($(this).hasClass('active')){
 			$(this).removeClass('active');
@@ -390,7 +390,7 @@ BRUSHED.toggle = function(){
    Tooltip
 ================================================== */
 
-BRUSHED.toolTip = function(){ 
+BRUSHED.toolTip = function(){
     $('a[data-toggle=tooltip]').tooltip();
 }
 
@@ -405,7 +405,7 @@ $(document).ready(function(){
 	Modernizr.load([
 	{
 		test: Modernizr.placeholder,
-		nope: '_include/js/placeholder.js', 
+		nope: 'js/placeholder.js', 
 		complete : function() {
 				if (!Modernizr.placeholder) {
 						Placeholders.init({
@@ -413,12 +413,12 @@ $(document).ready(function(){
 						hideOnFocus: false,
 						className: "yourClass",
 						textColor: "#999"
-						});    
+						});
 				}
 		}
 	}
 	]);
-	
+
 	// Preload the page with jPreLoader
 	$('body').jpreLoader({
 		splashID: "#jSplash",
@@ -429,7 +429,7 @@ $(document).ready(function(){
 			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
 		}
 	});
-	
+
 	BRUSHED.nav();
 	BRUSHED.mobileNav();
 	BRUSHED.listenerMenu();
