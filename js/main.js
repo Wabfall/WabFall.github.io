@@ -77,10 +77,10 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : 'img/slider-images/img-01.png', thumb : '', url : ''},
-											{image : 'img/slider-images/img-02.png',thumb : '', url : ''},
-											{image : 'img/slider-images/img-03.png',thumb : '', url : ''},
-											{image : 'img/slider-images/img-04.png',thumb : '', url : ''}
+											{image : 'img/slider-images/img-01.jpg', thumb : '', url : ''},
+											{image : 'img/slider-images/img-02.jpg',thumb : '', url : ''},
+											{image : 'img/slider-images/img-03.jpg',thumb : '', url : ''},
+											{image : 'img/slider-images/img-04.jpg',thumb : '', url : ''}
 									],
 
 		// Theme Options
