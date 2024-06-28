@@ -9,4 +9,7 @@ export default defineConfig({
       localsConvention: "camelCase",
     },
   },
+  build: {
+    outDir: 'build', // Change the output directory to 'build'
+  },
 });
