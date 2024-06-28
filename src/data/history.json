@@ -1,0 +1,30 @@
+[
+  {
+    "role": "Développeur Front-data",
+    "organisation": "Bouygues Telecom",
+    "startDate": "Sept, 2022",
+    "endDate": "Aujourd'hui",
+    "experiences": ["Développement Back-End Springboot", "Développement Web React.js", "Manipulation de données MongoDB et ElasticSearch"],
+    "imageSrc": "history/bouyguestelecom.png"
+  },
+  {
+    "role": "Co-fondateur",
+    "organisation": "Thingmill",
+    "startDate": "Janvier 2018",
+    "endDate": "Aujourd'hui",
+    "experiences": ["Développement Web Vue.js", "Création de graphisme", "Chargé de communication"],
+    "imageSrc": "history/thingmill.png"
+  },
+  {
+    "role": "Stagiaire en  développement informatique",
+    "organisation": "Ag2ir",
+    "startDate": "Avril 2022",
+    "endDate": "Juin 2022",
+    "experiences": [
+      "Développement d'un logiciel en java",
+      "Gestion de fichiers XML",
+      "Interface graphique en Java Swing"
+    ],
+    "imageSrc": "history/ag2ir.png"
+  }
+]

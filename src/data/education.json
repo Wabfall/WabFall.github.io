@@ -1,0 +1,30 @@
+[
+    {
+        "graduate": "Diplôme d'Ingénieur en Informatique",
+        "school": "ESIEA - École Supérieure d'Informatique, Électronique, Automatique",
+        "startDate": "Septembre 2022",
+        "endDate": "Août 2025",
+        "imageSrc": "education/esiea.png"
+    },
+    {
+        "graduate": "Programme de mobilité internationale pour apprentis de 3e année - ESIEA | UQAC",
+        "school": "UQAC - Université du Québec à Chicoutimi",
+        "startDate": "Mai 2023",
+        "endDate": "Juuillet 2023",
+        "imageSrc": "education/uqac.png"
+    },
+    {
+        "graduate": "Diplôme Universitaire Technologique en Informatique",
+        "school": "IUT du Havre",
+        "startDate": "Septembre 2020",
+        "endDate": "Juin 2022",
+        "imageSrc": "education/iut-lehavre.png"
+    },
+    {
+        "graduate": "BAC S Sciences de l'ingénieur",
+        "school": "Lycée Alain",
+        "startDate": "Septembre 2017",
+        "endDate": "Juin 2020",
+        "imageSrc": "education/lycee-alain.png"
+    }
+]

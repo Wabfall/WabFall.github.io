@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Highway to surf",
+    "imageSrc": "projects/highwaytosurf.png",
+    "description": "Projet concours de programmation au lycée sur la console Gamebuino (obtenu 2e place)",
+    "skills": [
+      "C",
+      "Arduino",
+      "Gamebuino"
+    ],
+    "lien": "https://gamebuino.com/fr/creations/highway-to-surf"
+  },
+  {
+    "title": "Retrobox",
+    "imageSrc": "projects/retrobox.png",
+    "description": "La RetroBox est une console portable permettant d'émuler tous les jeux jusqu'à la PS1.",
+    "skills": [
+      "Graphisme",
+      "Vue.js",
+      "Communicarion"
+    ],
+    "lien": "https://retrobox.tech/fr"
+  },
+  {
+    "title": "Thingmill",
+    "imageSrc": "projects/thingmill_logo_white.png",
+    "description": "Développement du site web de l'entreprise Thingmill",
+    "skills": [
+      "HTML",
+      "CSS",
+      "Graphisme"
+    ],
+    "lien": "https://thingmill.fr/"
+  }
+]
